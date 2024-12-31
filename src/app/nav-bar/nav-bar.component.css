@@ -1,0 +1,25 @@
+.navbar-custom {
+  background-color: #4caf50; /* Custom green color */
+  font-weight: 550;
+}
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  color: #fff;
+}
+.navbar-custom .nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.navbar-custom .nav-link:hover {
+  color: #ffeb3b; /* Highlight color */
+}
+.navbar-custom .dropdown-menu {
+  background-color: #4caf50;
+}
+.navbar-custom .dropdown-item {
+  color: #fff;
+}
+.navbar-custom .dropdown-item:hover {
+  background-color: #388e3c;
+  color: #ffeb3b;
+}
