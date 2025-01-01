@@ -1,0 +1,109 @@
+<app-nav-bar></app-nav-bar>
+
+<!--* Slider Section -->
+<style>
+  .custom-height {
+    height: 500px; /* Adjust the height as desired */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+  }
+</style>
+
+<div
+  id="carouselExampleInterval"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="3000">
+      <img
+        src="https://wallpapercat.com/w/full/6/7/5/585091-3840x2160-desktop-4k-hamburger-wallpaper-photo.jpg"
+        class="d-block w-100 custom-height"
+        alt="Burger with neon sign"
+      />
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img
+        src="https://images3.alphacoders.com/131/1313839.jpg"
+        class="d-block w-100 custom-height"
+        alt="Placeholder Image 1"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://images2.alphacoders.com/135/1353005.png"
+        class="d-block w-100 custom-height"
+        alt="Placeholder Image 2"
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleInterval"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleInterval"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<hr />
+<br />
+
+<!--* burgers -->
+<div
+  style="display: flex; justify-content: center; gap: 30px; margin-bottom: 50px"
+>
+  <!--* Fish burger -->
+  <div class="card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      src="https://wallpapercat.com/w/full/6/7/5/585091-3840x2160-desktop-4k-hamburger-wallpaper-photo.jpg"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Fish burger</h5>
+      <p class="card-text">500g</p>
+      <p class="card-text">Price: 1500 LKR</p>
+      <button
+        class="btn btn-success"
+        (click)="
+          addToCart({ name: 'Fish burger', weight: '500g', price: 1500 })
+        "
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+  <!--* Cheese burger -->
+  <div class="card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      src="https://images2.alphacoders.com/135/1353005.png"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Cheese burger</h5>
+      <p class="card-text">600g</p>
+      <p class="card-text">Price: 1200 LKR</p>
+      <button
+        class="btn btn-success"
+        (click)="
+          addToCart({ name: 'Cheese burger', weight: '600g', price: 1200 })
+        "
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
