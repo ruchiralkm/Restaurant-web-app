@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <app-nav-bar></app-nav-bar>
 
 <div class="container mt-5">
@@ -48,3 +49,55 @@
     </ng-template>
   </div>
 </div>
+=======
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4 text-primary">Your Shopping Cart</h1>
+
+  <div class="card shadow-lg p-4">
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-primary">
+            <tr>
+              <th>Item</th>
+              <th>Weight</th>
+              <th>Price (LKR)</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td>{{ item.name }}</td>
+              <td>{{ item.weight }}</td>
+              <td>{{ item.price }}</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-danger"
+                  (click)="removeItem(item)"
+                >
+                  <i class="fas fa-trash-alt"></i> Remove
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-end mt-3">
+        <button class="btn btn-outline-danger btn-lg" (click)="clearCart()">
+          Clear Cart
+        </button>
+      </div>
+    </div>
+
+    <ng-template #emptyCart>
+      <div class="text-center text-secondary">
+        <i class="fas fa-shopping-cart fa-5x"></i>
+        <p class="mt-4 fs-4">Your cart is empty!</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
+>>>>>>> 5aea1ab34399a4314f5c9fb0ea99cfffd7909276
